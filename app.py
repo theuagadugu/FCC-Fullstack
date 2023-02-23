@@ -34,7 +34,7 @@ JOBS=[
 def helloWorld():
 	return render_template("home.html",jobs=JOBS,titol=TITOL)
 
-@app.route("api/jobs") %#així és crea una api
+@app.route("api/jobs") #així és crea una api
 def list_jobs():
 	return(jsonify(JOBS))
 
