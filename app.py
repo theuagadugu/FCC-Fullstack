@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 print("hola")
 
 app=Flask(__name__)
@@ -31,9 +31,14 @@ JOBS=[
 ]
 
 @app.route("/")
-
 def helloWorld():
 	return render_template("home.html",jobs=JOBS,titol=TITOL)
+
+@app.route("api/jobs") %#així és crea una api
+def list_jobs():
+	return(jsonify(JOBS))
+
+
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0',debug=True)
