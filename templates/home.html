@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-	<title>TestWeb</title>
+	<title>{{titol}}</title>
 	<style >
 		h1 {
 			font-size:  40px;
@@ -23,7 +23,7 @@
 		h2 {
 			font-family: Roboto;
 			font-size: 32px;
-			color: rgb(100,100,100);
+			color: rgb(50,50,50);
 			text-align: center;
 		}
 
@@ -37,6 +37,13 @@
 			max-width: 720px;
 			margin:0 auto 0 auto; 
 		}
+		.jobTitle {
+			color: rgb(100, 100, 100);
+			margin-bottom: 5px;
+		}
+		.jobContainer {
+			margin-bottom: 15px;
+		}
 	</style>
 </head>
 <body>
@@ -45,8 +52,14 @@
 		<img id="banner" src="/static/banner.jpg" height="320">
 		<h2>About us</h2>
 		<p class="lead">Objetivo: aprender a generar los símbolos Sumatorio y Productorio con sus respectivos límites superior e inferior. No hay símbología que se le resista a \LaTeX. Esta afirmación, que alguien podría discutir como tal vez algo exagerada, es absolutamente rotunda en el ámbito matemático, razón primigenia de la existencia de este sistema de preparación documental. Escribir el símbolo de sumatorio es sumamente sencillo con el comando \sum</p>
-		<h2>Open Position</h2>
-		<p class="text-center">Show the jobs here</p>
+		<h2>Open Positions</h2>
+
+		<div class="jobList"> 
+			{% for job in jobs %}
+				{% include 'jobItem.html' %}
+			{% endfor %}			
+		</div>
+
 		<div style="text-align: center;">
 			<button class="btn btn-primary btn-lg">Contact Us</button>
 			<p class="mt-4">Copiright 2023º</p>
