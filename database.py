@@ -11,15 +11,12 @@ database= os.getenv("DB_DATABASE")
 
 
 def load_jobs_from_db():
-
 	connection = MySQLdb.connect(
-  host= host,
-  user=user,
-  passwd= password,
-  db= database,
-  ssl={'ssl': {'cert_reqs': ssl.CERT_NONE}}
-  
-)	
+		host= host,
+		user=user,
+		passwd= password,
+		db= database,
+		ssl={'ssl': {'cert_reqs': ssl.CERT_NONE}})	
 	c=connection.cursor()
 	c.execute("select * from jobs")
 	result=list(c.fetchall())
