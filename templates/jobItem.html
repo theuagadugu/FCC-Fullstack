@@ -4,6 +4,8 @@
 		<div><b>Location: </b>{{job['ubi']}}</div>
 		{% if job['salary']!=None %}
 		<div><b>Salary: </b>{{job['salary']}}</div>
+		{% else %}
+		<div style="height: 24px;"></div>
 		{% endif %}
 		</div>
 	<div class="col-3" style="text-align: right;">

@@ -37,6 +37,7 @@
 		#container {
 			max-width: 900px;
 			margin:0 auto 0 auto; 
+			background-size: contain
 		}
 		.jobTitle {
 			color: rgb(100, 100, 100);
@@ -51,13 +52,13 @@
 <body>
 	{% include 'nav.html' %}
 	<img id="banner" src="/static/banner.jpg" height="320">
-	<div id="container">
+	<div class="container">
 		<h1>TEST WEB</h1>
 		<div class="row" style="margin-bottom: 16px;">
-			<div class="col-md-6">
+			<div class="col-md-7">
 				<p class="lead" style="color: blue; text-align: justify;">Objetivo: aprender a generar los símbolos Sumatorio y Productorio con sus respectivos límites superior e inferior. No hay símbología que se le resista a \LaTeX. Esta afirmación, que alguien podría discutir como tal vez algo exagerada, es absolutamente rotunda en el ámbito matemático, razón primigenia de la existencia de este sistema de preparación documental. Escribir el símbolo de sumatorio es sumamente sencillo con el comando \sum.</p>
 			</div>
-			<div class="d-none d-md-block col-md-6" style="text-align: right;">
+			<div class="d-none d-md-block col-md-5" style="text-align: right;">
 				<img style="height: 320px;" src="/static/equip.png">
 			</div>
 		</div>
