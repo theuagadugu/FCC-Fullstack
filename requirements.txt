@@ -2,3 +2,4 @@ Flask
 gunicorn
 mysqlclient
 pyopenssl
+python-dotenv
