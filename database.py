@@ -4,13 +4,14 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-host= os.getenv("HOST")
-user=os.getenv("USERNAME")
-passwd= os.getenv("PASSWORD")
-db= os.getenv("DATABASE")
+host = os.getenv("DB_HOST")
+user=os.getenv("DB_USERNAME")
+password= os.getenv("DB_PASSWORD")
+database= os.getenv("DB_DATABASE")
+
 
 def load_jobs_from_db():
-	load_dotenv()
+
 	connection = MySQLdb.connect(
   host= host,
   user=user,
@@ -27,5 +28,5 @@ def load_jobs_from_db():
 	return [dict(zip(keys,i)) for i in result]
 
 if __name__ == '__main__':
-	print(os.getenv("HOST"))
-	print(load_jobs(), type(load_jobs()))
+	#print(os.getenv("HOST"))
+	print(load_jobs_from_db(), type(load_jobs_from_db()))
