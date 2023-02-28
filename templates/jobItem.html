@@ -1,7 +1,7 @@
 <div class="border-bottom row jobContainer">
 		<div class="col-9">
 		<div><h4 class="jobTitle">{{job['title']}}</h4></div>
-		<div><b>Location: </b>{{job['ubi']}}</div>
+		<div ><b>Location: </b>{{job['ubi']}}</div>
 		{% if job['salary']!=None %}
 		<div><b>Salary: </b>{{job['salary']}}</div>
 		{% else %}
@@ -9,6 +9,6 @@
 		{% endif %}
 		</div>
 	<div class="col-3" style="text-align: right;">
-		<button type="button" class="btn btn-primary">Apply</button>
+		<a href="/job/{{job['id']}}"type="button" class="btn btn-primary">Apply</a>
 	</div>
 </div>
